@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.2+commit.661d1103"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IBank",
+						"name": "bank",
+						"type": "address"
+					}
+				],
+				"name": "adminWithdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw_cur_contract",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"homework/Admin.sol": "Admin"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"homework/Admin.sol": {
+			"keccak256": "0x0ee9be88a204343900e04e4b27be87a332c397a7934470dc99405a8b59c0a463",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ba185ec0dedaeb25e78ba3ea92706669ba6edab363ded0270f6911baed0198e7",
+				"dweb:/ipfs/QmbAiWzqXJXkDpXFSZ6mA6h4UuJRvgiDYuV2bt61fvo6h2"
+			]
+		},
+		"homework/IBank.sol": {
+			"keccak256": "0x4fa741b85bd9c0c8154056956d26e527c9105288241277a1105b377f2814870a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://11f5f671898f20fe60b24bf00afa3ccc98b67d6f7fa0fe0c0faca65b348edbf7",
+				"dweb:/ipfs/QmNrg4kQBYqGQwYCxJ9qud6pHsPQaVd9DNk27BsqYoypEM"
+			]
+		}
+	},
+	"version": 1
+}

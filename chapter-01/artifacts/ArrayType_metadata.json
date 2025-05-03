@@ -1,0 +1,105 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "p_pure",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "size",
+						"type": "uint8"
+					}
+				],
+				"name": "testDynamicMemoryArray",
+				"outputs": [
+					{
+						"internalType": "uint8[]",
+						"name": "",
+						"type": "uint8[]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testDynamicStorageArray",
+				"outputs": [
+					{
+						"internalType": "uint8[]",
+						"name": "",
+						"type": "uint8[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testStatistcsArray",
+				"outputs": [
+					{
+						"internalType": "uint8[3]",
+						"name": "",
+						"type": "uint8[3]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testWriteDynamicStorageArray",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"chapter-01/ArrayType.sol": "ArrayType"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"chapter-01/ArrayType.sol": {
+			"keccak256": "0xdd478a21e8f70e83e5fe6228f870c759d8c4ada9f3a94bab44f4ef5a64fae981",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a50e726e47b310d38b5dada8e009df63a1fea3751f2e6ca33f5ef7fdec40b265",
+				"dweb:/ipfs/QmUpKUdd8PyWkfHRsruHamtgWt2Gp1Zirjn22kGjyAdDB5"
+			]
+		}
+	},
+	"version": 1
+}

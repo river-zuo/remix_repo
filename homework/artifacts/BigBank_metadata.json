@@ -1,0 +1,137 @@
+{
+	"compiler": {
+		"version": "0.8.2+commit.661d1103"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "addr_balance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAdminAddr",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTop3",
+				"outputs": [
+					{
+						"internalType": "address[3]",
+						"name": "",
+						"type": "address[3]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "new_addr",
+						"type": "address"
+					}
+				],
+				"name": "transferAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [
+					{
+						"internalType": "int8",
+						"name": "",
+						"type": "int8"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"homework/BigBank.sol": "BigBank"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"homework/Bank.sol": {
+			"keccak256": "0xdbacfd93255a0a9c498e6645f351dd37c93d3c4dedc21bcdfcda83b05f4c39ef",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bdf020f536590110ec9b0f9cd0325b53d2b3ef24479d357c16e620da92216887",
+				"dweb:/ipfs/QmeSFJRJus7Y6QTSDewDJK3c2GTnY4birkowABhuir3H8D"
+			]
+		},
+		"homework/BigBank.sol": {
+			"keccak256": "0xb98c06c8f37a2a9dedf2984bcdbeedd4f9daa57385cad88ee6851336050289aa",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ad471e7d713c51933f63abd443a3ecdbf42503433468caa5cf7f665b7175417e",
+				"dweb:/ipfs/QmNi3UgsmraPRfh7icKNkeGjYiyFfstt2oQ779bPDgwXWA"
+			]
+		},
+		"homework/IBank.sol": {
+			"keccak256": "0x4fa741b85bd9c0c8154056956d26e527c9105288241277a1105b377f2814870a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://11f5f671898f20fe60b24bf00afa3ccc98b67d6f7fa0fe0c0faca65b348edbf7",
+				"dweb:/ipfs/QmNrg4kQBYqGQwYCxJ9qud6pHsPQaVd9DNk27BsqYoypEM"
+			]
+		}
+	},
+	"version": 1
+}

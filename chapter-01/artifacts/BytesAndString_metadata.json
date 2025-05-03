@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "pp",
+						"type": "uint256[]"
+					}
+				],
+				"name": "call_data",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"chapter-01/BytesAndString.sol": "BytesAndString"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"chapter-01/BytesAndString.sol": {
+			"keccak256": "0xc0c2d2330a42e8ff8f654ae3cadd12ca6dab0e267bb4863eab3aa39f0eaf40b2",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://6fdb89363ae30f639d6be14be65c21bcc61fe72362e5476b56f0d13ca16d5b04",
+				"dweb:/ipfs/QmS6N3xB7KZjk5jXi1FqFwXTteZf9gP2aVemWucbqdxMXX"
+			]
+		}
+	},
+	"version": 1
+}

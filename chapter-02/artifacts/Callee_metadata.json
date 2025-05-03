@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.2+commit.661d1103"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_x",
+						"type": "uint256"
+					}
+				],
+				"name": "setX",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"chapter-02/FunctionCallSameFile.sol": "Callee"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"chapter-02/FunctionCallSameFile.sol": {
+			"keccak256": "0xfcdebb73ea6f38b078a50dfb5c50a031ab63431e3e77490838ca3c09b54c4d19",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://825e761e749a62f5cacd3274bf8b46081e840ed4fe70083b767555b7f94f542f",
+				"dweb:/ipfs/QmTg7zj4j4UnGrQeVWunLE4iUFZ5ruWt2DDWARjiuEYFqN"
+			]
+		}
+	},
+	"version": 1
+}

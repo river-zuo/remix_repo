@@ -1,0 +1,62 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MyFirstToken.sol": "MyFirstToken"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MyFirstToken.sol": {
+			"keccak256": "0xad80f708e95b2513c5f24757e766b24591957b8570dfca930e1bec451f9289f7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4c7ae86c73a10a0eb141bc23d027346494208f5d384d4f5b6259e362f4bdf2e1",
+				"dweb:/ipfs/QmTm7q7qWQUfgyr8o86xERbixAdfw3hYUDMDVdXVooABcy"
+			]
+		}
+	},
+	"version": 1
+}

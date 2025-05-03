@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.2+commit.661d1103"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "transferToContract",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"homework/Payable.sol": "Payable"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"homework/Payable.sol": {
+			"keccak256": "0xb0d9168e877a977cb9e9c8e54124d6586b4ddbe7a9a0541a825cfeb946fd4b99",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d6a67280237f0f4b2ba978225a67426ef9a99862fe5a3e215b6314ef695acd0c",
+				"dweb:/ipfs/QmQSLeYxRY472HM4qYyzpmmSCBg4pv3k7X8yv2eZzEUzjT"
+			]
+		}
+	},
+	"version": 1
+}

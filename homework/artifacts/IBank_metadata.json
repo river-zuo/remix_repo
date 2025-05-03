@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.2+commit.661d1103"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [
+					{
+						"internalType": "int8",
+						"name": "",
+						"type": "int8"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"homework/IBank.sol": "IBank"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"homework/IBank.sol": {
+			"keccak256": "0x4fa741b85bd9c0c8154056956d26e527c9105288241277a1105b377f2814870a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://11f5f671898f20fe60b24bf00afa3ccc98b67d6f7fa0fe0c0faca65b348edbf7",
+				"dweb:/ipfs/QmNrg4kQBYqGQwYCxJ9qud6pHsPQaVd9DNk27BsqYoypEM"
+			]
+		}
+	},
+	"version": 1
+}

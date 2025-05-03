@@ -1,0 +1,159 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "readPerson",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint16",
+								"name": "age",
+								"type": "uint16"
+							}
+						],
+						"internalType": "struct StructType.Person",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testLocationPerson",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint16",
+								"name": "age",
+								"type": "uint16"
+							}
+						],
+						"internalType": "struct StructType.Person",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testMemoryPerson",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint16",
+								"name": "age",
+								"type": "uint16"
+							}
+						],
+						"internalType": "struct StructType.Person",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint16",
+								"name": "age",
+								"type": "uint16"
+							}
+						],
+						"internalType": "struct StructType.Person",
+						"name": "p",
+						"type": "tuple"
+					}
+				],
+				"name": "writePerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "nn",
+						"type": "string"
+					}
+				],
+				"name": "writePersonName",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"chapter-01/StructType.sol": "StructType"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"chapter-01/StructType.sol": {
+			"keccak256": "0x95250956fadf5ffcd35a90f3e34bd648220e36b78558bc8fd1884564eae57617",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://3ace288ddad7167c229fbbd12968369503d1501c8b3eff2a7e935aef4ebc2475",
+				"dweb:/ipfs/QmeW1FgYHFfw3bqZh5Fz5Ur5WpHyRECoo2SBkbGGj7SYup"
+			]
+		}
+	},
+	"version": 1
+}
