@@ -12,14 +12,26 @@ contract NFTMarket is BaseERC20CallBack {
     MyNFT public immutable _nft;
     BaseERC20 public immutable _erc20;
 
+    event NftOnList(uint256  tokenId, address  seller, uint256 price);
+
+    event Transfer_NFT(address  from, address  to, uint256 tokenId);
+
+    event Refund_Excess_Amount(address  from, address  to, uint256 refund);
+
+    event NFT_Received(address  from, address  to, uint256 tokenId);
+
+    event XHasChange(uint256 indexed i);
+
     constructor(address nftAddr, address erc20Addr) {
         _nft = MyNFT(nftAddr);
         _erc20 = BaseERC20(erc20Addr);
+        emit XHasChange(1);
     }
 
     // NFT的持有者上架NFT, 两种实现方式: 1.授权 2.转到该合约
     function list(uint256 tokenId, uint256 amount) public  {
         address owner = _nft.ownerOf(tokenId);
+        require(owner != address(0), "nft not exist");
         require(owner == msg.sender, "not the nft holder");
         require(amount > 0, "price must more then zero");
         // 查看NFTMarket是否有授权
@@ -27,6 +39,7 @@ contract NFTMarket is BaseERC20CallBack {
         require((approveAddr == address(this)), "NFTMarket has not get approved");
         // 上架
         pricesOfNFT[tokenId] = amount;
+        emit NftOnList(tokenId, msg.sender, amount);
     }
 
     // 普通的购买 NFT 功能，用户转入所定价的 token 数量，获得对应的 NFT
@@ -35,10 +48,13 @@ contract NFTMarket is BaseERC20CallBack {
         require(price > 0, "nft not on list");
         address old_holder = _nft.ownerOf(tokenId);
         address nft_new_holder = msg.sender;
+        require(old_holder != nft_new_holder, "you have owned the nft");
         // 转账
         bool success = _erc20.transferFrom(msg.sender, old_holder, price);
         require(success, "thansfer success");
         _nft.transferFrom(old_holder, nft_new_holder, tokenId);
+        pricesOfNFT[tokenId] = 0;
+        emit Transfer_NFT(old_holder, nft_new_holder, tokenId);
     }
 
     // 实现NFT购买功能
@@ -47,9 +63,16 @@ contract NFTMarket is BaseERC20CallBack {
         uint256 price = pricesOfNFT[tokenId];
         require(price > 0, "nft not on list");
         require(amount >= price, "amount is not enougn");
+        if (amount > price) {
+            // 退款
+            uint256 refund = amount - price;
+            _erc20.transfer(account, refund);
+            emit Refund_Excess_Amount(address(this), account, refund);
+        }
         address old_holder = _nft.ownerOf(tokenId);
-        address nft_new_holder = msg.sender;
+        address nft_new_holder = account;
         _nft.transferFrom(old_holder, nft_new_holder, tokenId);
+        emit NFT_Received(old_holder, nft_new_holder, tokenId);
         return BaseERC20CallBack.tokensReceived.selector;
     }
 

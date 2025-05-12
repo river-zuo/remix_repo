@@ -14,7 +14,7 @@ contract MyNFT is ERC721URIStorage {
     function _baseURI() internal view override returns (string memory) {
         return baseURI_;
     }
-
+    
     // 铸币
     function mintMyNFT(address to, uint256 tokenId, string memory tokenURI) public  {
         _mint(to, tokenId);
