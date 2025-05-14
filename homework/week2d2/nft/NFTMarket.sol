@@ -9,6 +9,15 @@ contract NFTMarket is BaseERC20CallBack {
 
     mapping(uint256 => uint256) pricesOfNFT;
 
+    NftDetail[] onList;
+
+    // id为0表示移除
+    struct NftDetail {
+        uint256 id;
+        uint256 price;
+        address owner;
+    }
+
     MyNFT public immutable _nft;
     BaseERC20 public immutable _erc20;
 
@@ -28,6 +37,16 @@ contract NFTMarket is BaseERC20CallBack {
         emit XHasChange(1);
     }
 
+    // 获取上架列表
+    function nftList() public view returns (NftDetail[] memory) {
+        return onList;
+    }
+
+    // nft价格
+    function nftPrice(uint256 tokenId) public view returns (uint256) {
+        return pricesOfNFT[tokenId];
+    }
+
     // NFT的持有者上架NFT, 两种实现方式: 1.授权 2.转到该合约
     function list(uint256 tokenId, uint256 amount) public  {
         address owner = _nft.ownerOf(tokenId);
@@ -39,6 +58,13 @@ contract NFTMarket is BaseERC20CallBack {
         require((approveAddr == address(this)), "NFTMarket has not get approved");
         // 上架
         pricesOfNFT[tokenId] = amount;
+        
+        NftDetail memory detail = NftDetail({
+            id: tokenId,
+            price: amount,
+            owner: owner
+        });
+        onList.push(detail);
         emit NftOnList(tokenId, msg.sender, amount);
     }
 
@@ -54,6 +80,8 @@ contract NFTMarket is BaseERC20CallBack {
         require(success, "thansfer success");
         _nft.transferFrom(old_holder, nft_new_holder, tokenId);
         pricesOfNFT[tokenId] = 0;
+        // 移除列表
+        _deleteNFTonList(tokenId);
         emit Transfer_NFT(old_holder, nft_new_holder, tokenId);
     }
 
@@ -73,7 +101,20 @@ contract NFTMarket is BaseERC20CallBack {
         address nft_new_holder = account;
         _nft.transferFrom(old_holder, nft_new_holder, tokenId);
         emit NFT_Received(old_holder, nft_new_holder, tokenId);
+        // 移除列表
+        _deleteNFTonList(tokenId);
         return BaseERC20CallBack.tokensReceived.selector;
+    }
+
+    function _deleteNFTonList(uint256 tokenId) internal  {
+        for (uint256 i=0; i<onList.length;i++) {
+            NftDetail memory detail = onList[i];
+            if (detail.id == tokenId) {
+                detail.id = 0;
+                onList[i] = detail;
+                break ;
+            }
+        }
     }
 
 }
