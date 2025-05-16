@@ -1,0 +1,21 @@
+{
+  "name": "BlockTime",
+  "address": "0x8eeacc59a4d9dc452ce3e52057e3bb434026c510",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getBlockTimestamp",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "filePath": "remix_repo-1746495552870/homework/week3d3/MyBlockTime.sol",
+  "pinnedAt": 1747224336355
+}
