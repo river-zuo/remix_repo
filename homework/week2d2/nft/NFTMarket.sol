@@ -31,6 +31,8 @@ contract NFTMarket is BaseERC20CallBack {
 
     event XHasChange(uint256 indexed i);
 
+    event Use_Start_Buy_NFT(address from, uint256 tokenId);
+
     constructor(address nftAddr, address erc20Addr) {
         _nft = MyNFT(nftAddr);
         _erc20 = BaseERC20(erc20Addr);
@@ -70,6 +72,7 @@ contract NFTMarket is BaseERC20CallBack {
 
     // 普通的购买 NFT 功能，用户转入所定价的 token 数量，获得对应的 NFT
     function buyNFT(uint256 tokenId) public {
+        emit Use_Start_Buy_NFT(msg.sender, tokenId);
         uint256 price = pricesOfNFT[tokenId];
         require(price > 0, "nft not on list");
         address old_holder = _nft.ownerOf(tokenId);
