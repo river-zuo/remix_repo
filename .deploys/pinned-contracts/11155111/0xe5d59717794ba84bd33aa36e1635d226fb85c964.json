@@ -1,0 +1,63 @@
+{
+  "name": "EIP7702Delegate",
+  "address": "0xe5d59717794ba84bd33aa36e1635d226fb85c964",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "targets",
+          "type": "address[]"
+        },
+        {
+          "internalType": "bytes[]",
+          "name": "invokeData",
+          "type": "bytes[]"
+        }
+      ],
+      "name": "multiExec",
+      "outputs": [
+        {
+          "internalType": "bytes[]",
+          "name": "results",
+          "type": "bytes[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "addr_this",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address[]",
+          "name": "targets",
+          "type": "address[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "code",
+          "type": "uint8"
+        }
+      ],
+      "name": "triggle_ink",
+      "type": "event"
+    }
+  ],
+  "filePath": "remix_repo-1746495552870/homework/week6d5/EIP7702Delegate.sol",
+  "pinnedAt": 1749197180594
+}
