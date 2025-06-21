@@ -1,6 +1,6 @@
 {
   "name": "EIP7702Delegate",
-  "address": "0xe5d59717794ba84bd33aa36e1635d226fb85c964",
+  "address": "0x6aaeb290a5d2bf4297924a6abe02502aea1b1159",
   "abi": [
     {
       "inputs": [
@@ -23,6 +23,56 @@
           "type": "bytes[]"
         }
       ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "invokeData",
+          "type": "bytes"
+        }
+      ],
+      "name": "multiExecSingle",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "resultV",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "status",
+          "type": "uint8"
+        }
+      ],
+      "name": "record_status",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "status",
+          "type": "bool"
+        }
+      ],
+      "name": "testEvent",
+      "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
     },
@@ -59,5 +109,5 @@
     }
   ],
   "filePath": "remix_repo-1746495552870/homework/week6d5/EIP7702Delegate.sol",
-  "pinnedAt": 1749197180594
+  "pinnedAt": 1749285930887
 }
